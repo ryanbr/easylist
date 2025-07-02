@@ -1,0 +1,97 @@
+name: Run nwss twice-hourly with two configs   # :15 uses config-clean; :45 uses config-clean2
+
+on:
+  schedule:
+    - cron: "15 * * * *"          # minute 15 → config-clean.json
+    - cron: "45 * * * *"          # minute 45 → config-clean2.json
+  workflow_dispatch:              # manual trigger for testing
+
+permissions:
+  contents: write                 # allow commits back to *this* repo (ryanbr/easylist)
+
+env:
+  SCRIPT_REPO: ryanbr/network-scanner                 # nwss source
+  LIST_FILE:  easylist/easylist_adservers.txt         # list to update
+  CONFIG_A_GPG: config-clean.json.gpg                 # encrypted config A
+  CONFIG_B_GPG: config-clean2.json.gpg                # encrypted config B
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    env:
+      SCHEDULE: ${{ github.event.schedule }}
+
+    steps:
+      # 1. Pull *this* repo (ryanbr/easylist)
+      - uses: actions/checkout@v4
+
+      # 2. Tools: Node + GPG
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: sudo apt-get update && sudo apt-get install -y gnupg
+
+      # 3. Clone nwss
+      - name: Fetch nwss
+        run: |
+          git clone --depth 1 https://github.com/${SCRIPT_REPO}.git nwss
+          cd nwss && if [ -f package.json ]; then npm ci; fi
+
+      # 4. Decrypt the correct config & run nwss.js
+      - name: Decrypt config and run nwss.js
+        env:
+          PASSPHRASE_A: ${{ secrets.CONFIG_CLEAN_PASSPHRASE }}
+          PASSPHRASE_B: ${{ secrets.CONFIG_CLEAN2_PASSPHRASE }}
+        run: |
+          if [ "$SCHEDULE" = "15 * * * *" ]; then
+            CONFIG_GPG="${CONFIG_A_GPG}"
+            PASSPHRASE="$PASSPHRASE_A"
+          else
+            CONFIG_GPG="${CONFIG_B_GPG}"
+            PASSPHRASE="$PASSPHRASE_B"
+          fi
+
+          cp "$CONFIG_GPG" nwss/
+          cd nwss
+
+          echo "$PASSPHRASE" | gpg --batch --yes --passphrase-fd 0 \
+            --output config.json --decrypt "$(basename "$CONFIG_GPG")"
+
+          node nwss.js \
+            --clean-rules --remove-tempfiles --debug --dumpurls \
+            --remove-dubes --color --custom-json config.json \
+            -o eztvoutput
+
+          BYTES=$(stat -c%s eztvoutput)
+          if [ "$BYTES" -lt 10 ] || [ "$BYTES" -gt 10000 ]; then
+            echo "::error::eztvoutput size $BYTES bytes out of range"; exit 1; fi
+
+          cp eztvoutput ../nwss-output.txt
+
+      # 5. Insert block on line 3 and run FOP-nocommit.py
+      - name: Merge output and sort
+        shell: bash
+        run: |
+          mkdir -p "$(dirname "$LIST_FILE")"
+          touch "$LIST_FILE"
+
+          { head -n 2 "$LIST_FILE"; \
+            cat nwss-output.txt;    \
+            tail -n +3 "$LIST_FILE"; } > merged.tmp
+          mv merged.tmp "$LIST_FILE"
+
+          python3 FOP-nocommit.py easylist
+
+      # 6. Commit only if file changed
+      - name: Commit changes
+        run: |
+          if git diff --quiet "$LIST_FILE"; then
+            echo "No changes – skipping commit"
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$LIST_FILE"
+          git commit -m "M: update easylist_adservers.txt (test)"
+          git push
+
