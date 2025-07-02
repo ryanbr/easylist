@@ -2,12 +2,12 @@ name: Run nwss twice-hourly with two configs (15 / 45)
 
 on:
   schedule:
-    - cron: "15 * * * *"          # minute 15 → config-clean.json
-    - cron: "45 * * * *"          # minute 45 → config-clean2.json
+    - cron: "15 * * * *"      # minute 15 → config-clean.json
+    - cron: "45 * * * *"      # minute 45 → config-clean2.json
   workflow_dispatch:
 
 permissions:
-  contents: write                 # allow commit back to this repo
+  contents: write
 
 env:
   SCRIPT_REPO: ryanbr/network-scanner
@@ -25,32 +25,54 @@ jobs:
     # 1 – checkout this repo
     - uses: actions/checkout@v4
 
-    # 2 – tools
+    # 2 – Node + CLI tools
     - uses: actions/setup-node@v4
-      with: { node-version: 20 }
-    - run: sudo apt-get update && sudo apt-get install -y gnupg
+      with:
+        node-version: 20
 
-    # 3 – clone nwss
+    - name: Install CLI tools
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y gnupg whois dnsutils curl
+
+    # 3 – Install Google Chrome
+    - name: Setup Google Chrome
+      id: setup_chrome
+      uses: browser-actions/setup-chrome@v1
+      with:
+        chrome-version: stable
+
+    # 4 – Fetch nwss and install deps
     - name: Fetch nwss
+      env:
+        PUPPETEER_SKIP_DOWNLOAD: "1"
       run: |
         echo "::notice::Cloning https://github.com/${SCRIPT_REPO}.git"
         git clone --depth 1 "https://github.com/${SCRIPT_REPO}.git" nwss
         cd nwss
         if [ -f package.json ]; then
           if [ -f package-lock.json ] || [ -f npm-shrinkwrap.json ]; then
-            npm ci    --no-audit --no-fund
+            npm ci --no-audit --no-fund
           else
             npm install --no-audit --no-fund
           fi
         fi
 
-    # 4 – decrypt correct config & run nwss.js
+    # 5 – Confirm Chrome version
+    - name: Confirm Chrome binary
+      run: |
+        echo "Using Chrome binary at: $PUPPETEER_EXECUTABLE_PATH"
+        "$PUPPETEER_EXECUTABLE_PATH" --version
+      env:
+        PUPPETEER_EXECUTABLE_PATH: ${{ steps.setup_chrome.outputs.chrome-path }}
+
+    # 6 – Decrypt and run nwss.js
     - name: Decrypt config and run nwss.js
       env:
         PASSPHRASE_A: ${{ secrets.CONFIG_CLEAN_PASSPHRASE }}
         PASSPHRASE_B: ${{ secrets.CONFIG_CLEAN2_PASSPHRASE }}
+        PUPPETEER_EXECUTABLE_PATH: ${{ steps.setup_chrome.outputs.chrome-path }}
       run: |
-        # decide which encrypted file / passphrase to use
         if [ "$SCHEDULE" = "15 * * * *" ]; then
           CONFIG_GPG="${CONFIG_A_GPG}"
           PASSPHRASE="$PASSPHRASE_A"
@@ -59,10 +81,9 @@ jobs:
           PASSPHRASE="$PASSPHRASE_B"
         fi
 
-        # copy .gpg into nwss folder & decrypt
         cp "$CONFIG_GPG" nwss/
         cd nwss
-        JSON_FILE="$(basename "$CONFIG_GPG" .gpg)"   # e.g. config-clean.json
+        JSON_FILE="$(basename "$CONFIG_GPG" .gpg)"
 
         echo "$PASSPHRASE" | gpg --batch --yes --passphrase-fd 0 \
           --output "$JSON_FILE" --decrypt "$(basename "$CONFIG_GPG")"
@@ -73,14 +94,13 @@ jobs:
           --remove-dubes --custom-json "$JSON_FILE" \
           -o eztvoutput
 
-        # sanity-check size
         BYTES=$(stat -c%s eztvoutput)
         if [ "$BYTES" -lt 10 ] || [ "$BYTES" -gt 10000 ]; then
           echo "::error::eztvoutput size $BYTES bytes out of range"; exit 1; fi
 
         cp eztvoutput ../nwss-output.txt
 
-    # 5 – merge & sort
+    # 7 – Merge into filter list and sort
     - name: Merge output and sort
       shell: bash
       run: |
@@ -94,7 +114,7 @@ jobs:
 
         python3 FOP-nocommit.py easylist
 
-    # 6 – commit if changed
+    # 8 – Commit if changed
     - name: Commit changes
       run: |
         if git diff --quiet "$LIST_FILE"; then
