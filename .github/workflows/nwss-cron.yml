@@ -2,8 +2,8 @@ name: Run nwss twice-hourly with two configs (15 / 45)
 
 on:
   schedule:
-    - cron: "15 * * * *"      # minute 15 → config-clean.json
-    - cron: "45 * * * *"      # minute 45 → config-clean2.json
+    - cron: "33 * * * *"      # minute 33 → config-clean.json
+    - cron: "57 * * * *"      # minute 57 → config-clean2.json
   workflow_dispatch:
 
 permissions:
