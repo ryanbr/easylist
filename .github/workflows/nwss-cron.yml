@@ -91,9 +91,10 @@ jobs:
         echo "::notice::Running nwss with $JSON_FILE"
         node nwss.js \
           --clean-rules --remove-tempfiles \
-          --remove-dubes --custom-json "$JSON_FILE" \
+          --remove-dubes --debug --dumpurls --custom-json "$JSON_FILE" \
           -o eztvoutput
 
+        cat eztvoutput
         BYTES=$(stat -c%s eztvoutput)
         if [ "$BYTES" -lt 10 ] || [ "$BYTES" -gt 10000 ]; then
           echo "::error::eztvoutput size $BYTES bytes out of range"; exit 1; fi
