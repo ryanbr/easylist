@@ -1,19 +1,19 @@
-name: Run nwss twice-hourly with two configs   # :15 uses config-clean; :45 uses config-clean2
+name: Run nwss twice-hourly with two configs
 
 on:
   schedule:
-    - cron: "15 * * * *"          # minute 15 → config-clean.json
-    - cron: "45 * * * *"          # minute 45 → config-clean2.json
-  workflow_dispatch:              # manual trigger for testing
+    - cron: "15 * * * *"    # Run config-clean.json at :15
+    - cron: "45 * * * *"    # Run config-clean2.json at :45
+  workflow_dispatch:        # Allow manual runs
 
 permissions:
-  contents: write                 # allow commits back to *this* repo (ryanbr/easylist)
+  contents: write
 
 env:
-  SCRIPT_REPO: ryanbr/network-scanner                 # nwss source
-  LIST_FILE:  easylist/easylist_adservers.txt         # list to update
-  CONFIG_A_GPG: config-clean.json.gpg                 # encrypted config A
-  CONFIG_B_GPG: config-clean2.json.gpg                # encrypted config B
+  SCRIPT_REPO: ryanbr/network-scanner
+  LIST_FILE:  easylist/easylist_adservers.txt
+  CONFIG_A_GPG: config-clean.json.gpg
+  CONFIG_B_GPG: config-clean2.json.gpg
 
 jobs:
   update:
@@ -22,22 +22,35 @@ jobs:
       SCHEDULE: ${{ github.event.schedule }}
 
     steps:
-      # 1. Pull *this* repo (ryanbr/easylist)
+      # 1. Checkout this repo
       - uses: actions/checkout@v4
 
-      # 2. Tools: Node + GPG
+      # 2. Install Node and GPG
       - uses: actions/setup-node@v4
         with:
           node-version: 20
       - run: sudo apt-get update && sudo apt-get install -y gnupg
 
-      # 3. Clone nwss
+      # 3. Fetch nwss repo and install dependencies (fallback if no lockfile)
       - name: Fetch nwss
         run: |
-          git clone --depth 1 https://github.com/${SCRIPT_REPO}.git nwss
-          cd nwss && if [ -f package.json ]; then npm ci; fi
+          echo "::notice::Cloning https://github.com/${SCRIPT_REPO}.git..."
+          git clone --depth 1 "https://github.com/${SCRIPT_REPO}.git" nwss
+          cd nwss
 
-      # 4. Decrypt the correct config & run nwss.js
+          if [ -f package.json ]; then
+            if [ -f package-lock.json ] || [ -f npm-shrinkwrap.json ]; then
+              echo "🔧 Running npm ci (lockfile present)"
+              npm ci --no-audit --no-fund
+            else
+              echo "🔧 No lockfile – falling back to npm install"
+              npm install --no-audit --no-fund
+            fi
+          else
+            echo "ℹ️ No package.json – skipping npm install"
+          fi
+
+      # 4. Decrypt the correct config and run nwss.js
       - name: Decrypt config and run nwss.js
         env:
           PASSPHRASE_A: ${{ secrets.CONFIG_CLEAN_PASSPHRASE }}
@@ -46,16 +59,19 @@ jobs:
           if [ "$SCHEDULE" = "15 * * * *" ]; then
             CONFIG_GPG="${CONFIG_A_GPG}"
             PASSPHRASE="$PASSPHRASE_A"
+            echo "::notice::Using config-clean.json"
           else
             CONFIG_GPG="${CONFIG_B_GPG}"
             PASSPHRASE="$PASSPHRASE_B"
+            echo "::notice::Using config-clean2.json"
           fi
 
           cp "$CONFIG_GPG" nwss/
           cd nwss
 
           echo "$PASSPHRASE" | gpg --batch --yes --passphrase-fd 0 \
-            --output config.json --decrypt "$(basename "$CONFIG_GPG")"
+            --output config.json \
+            --decrypt "$(basename "$CONFIG_GPG")"
 
           node nwss.js \
             --clean-rules --remove-tempfiles --debug --dumpurls \
@@ -64,11 +80,13 @@ jobs:
 
           BYTES=$(stat -c%s eztvoutput)
           if [ "$BYTES" -lt 10 ] || [ "$BYTES" -gt 10000 ]; then
-            echo "::error::eztvoutput size $BYTES bytes out of range"; exit 1; fi
+            echo "::error::eztvoutput size $BYTES bytes out of range"
+            exit 1
+          fi
 
           cp eztvoutput ../nwss-output.txt
 
-      # 5. Insert block on line 3 and run FOP-nocommit.py
+      # 5. Merge nwss output at line 3 and sort
       - name: Merge output and sort
         shell: bash
         run: |
@@ -82,7 +100,7 @@ jobs:
 
           python3 FOP-nocommit.py easylist
 
-      # 6. Commit only if file changed
+      # 6. Commit and push only if changes detected
       - name: Commit changes
         run: |
           if git diff --quiet "$LIST_FILE"; then
@@ -92,6 +110,6 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add "$LIST_FILE"
-          git commit -m "M: update easylist_adservers.txt (test)"
+          git commit -m "chore: update easylist_adservers.txt (nwss cron)"
           git push
 
