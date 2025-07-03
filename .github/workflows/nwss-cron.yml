@@ -1,15 +1,13 @@
-name: Run nwss (configs at :03, :46)
+name: Run nwss (configs at :03, :30)
 
-# ---- NEW: queue overlapping runs, don't cancel them --------------
 concurrency:
-  group: nwss-cron            # all runs share the same lock
-  cancel-in-progress: false   # queue the next run until the lock is free
-# ------------------------------------------------------------------
+  group: nwss-cron
+  cancel-in-progress: false
 
 on:
   schedule:
     - cron: "3 * * * *"       # config-clean.json
-    - cron: "46 * * * *"      # config-clean2.json
+    - cron: "30 * * * *"      # config-clean2.json
   workflow_dispatch:
     inputs:
       config:
@@ -72,7 +70,6 @@ jobs:
           PASSPHRASE_B: ${{ secrets.CONFIG_CLEAN2_PASSPHRASE }}
           PUPPETEER_EXECUTABLE_PATH: ${{ steps.setup_chrome.outputs.chrome-path }}
         run: |
-          # Choose config file
           if [ -n "$CONFIG_FROM_INPUT" ]; then
             CONFIG_GPG="$CONFIG_FROM_INPUT"
           elif [ "$SCHEDULE" = "3 * * * *" ]; then
@@ -81,7 +78,6 @@ jobs:
             CONFIG_GPG="$CONFIG_B_GPG"
           fi
 
-          # Map to passphrase and output file
           if [ "$CONFIG_GPG" = "$CONFIG_A_GPG" ]; then
             PASSPHRASE="$PASSPHRASE_A"
             OUTPUT_FILE="output"
@@ -121,10 +117,16 @@ jobs:
       - name: Commit changes
         run: |
           if git diff --quiet "$LIST_FILE"; then
-            echo "No changes – skipping commit"; exit 0; fi
+            echo "No changes – skipping commit"
+            exit 0
+          fi
+
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add "$LIST_FILE"
           git commit -m "chore: update easylist_adservers.txt (nwss cron)"
+
+          # Ensure up-to-date with remote to avoid push errors
+          git pull --rebase --autostash origin "$(git rev-parse --abbrev-ref HEAD)"
           git push
 
