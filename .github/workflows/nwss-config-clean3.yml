@@ -1,4 +1,4 @@
-name: NWSS – config-clean2.json  (part 2. runs :59 past each hour)
+name: NWSS – config-clean2.json  (part 2. runs :57 past each hour)
 
 concurrency:
   group: nwss-config-clean2
@@ -6,7 +6,7 @@ concurrency:
 
 on:
   schedule:
-    - cron: "59 * * * *"      # minute 50
+    - cron: "57 * * * *"      # minute 50
   workflow_dispatch:
 
 permissions:

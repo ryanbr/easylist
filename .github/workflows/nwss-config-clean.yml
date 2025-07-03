@@ -1,4 +1,4 @@
-name: NWSS – config-clean.json  (runs :03 past each hour)
+name: NWSS – config-clean.json  (runs :05 past each hour)
 
 concurrency:
   group: nwss-config-clean
