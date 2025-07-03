@@ -1,10 +1,9 @@
-name: Run nwss (configs at :03, :30, :45)
+name: Run nwss (configs at :03, :43)
 
 on:
   schedule:
     - cron: "3 * * * *"       # config-clean.json
-    - cron: "30 * * * *"      # config-clean2.json
-    - cron: "45 * * * *"      # second pass of config-clean2.json
+    - cron: "43 * * * *"      # config-clean2.json
   workflow_dispatch:
     inputs:
       config:
@@ -61,23 +60,20 @@ jobs:
       env:
         PUPPETEER_EXECUTABLE_PATH: ${{ steps.setup_chrome.outputs.chrome-path }}
 
-    # ---------- MAIN STEP: decrypt & run with per-config output ----------
     - name: Decrypt config and run nwss.js
       env:
         PASSPHRASE_A: ${{ secrets.CONFIG_CLEAN_PASSPHRASE }}
         PASSPHRASE_B: ${{ secrets.CONFIG_CLEAN2_PASSPHRASE }}
         PUPPETEER_EXECUTABLE_PATH: ${{ steps.setup_chrome.outputs.chrome-path }}
       run: |
-        # pick config .gpg ------------------------------------------------
         if [ -n "$CONFIG_FROM_INPUT" ]; then
           CONFIG_GPG="$CONFIG_FROM_INPUT"
         elif [ "$SCHEDULE" = "3 * * * *" ]; then
           CONFIG_GPG="$CONFIG_A_GPG"
-        else                         # 30 or 45 minute runs
+        else
           CONFIG_GPG="$CONFIG_B_GPG"
         fi
 
-        # map to passphrase & output filename ----------------------------
         if [ "$CONFIG_GPG" = "$CONFIG_A_GPG" ]; then
           PASSPHRASE="$PASSPHRASE_A"
           OUTPUT_FILE="output"
@@ -86,14 +82,15 @@ jobs:
           OUTPUT_FILE="output2"
         fi
 
-        # decrypt --------------------------------------------------------
+        echo "::notice::Using config: $CONFIG_GPG"
+        echo "::notice::Writing output to: $OUTPUT_FILE"
+
         cp "$CONFIG_GPG" nwss/
         cd nwss
         JSON_FILE="$(basename "$CONFIG_GPG" .gpg)"
         echo "$PASSPHRASE" | gpg --batch --yes --passphrase-fd 0 \
           --output "$JSON_FILE" --decrypt "$(basename "$CONFIG_GPG")"
 
-        # run nwss with unique output -----------------------------------
         node nwss.js \
           --clean-rules --remove-tempfiles --debug --dumpurls \
           --remove-dubes --color --custom-json "$JSON_FILE" \
@@ -102,11 +99,8 @@ jobs:
         BYTES=$(stat -c%s "$OUTPUT_FILE")
         if [ "$BYTES" -lt 10 ] || [ "$BYTES" -gt 10000 ]; then
           echo "::error::${OUTPUT_FILE} size $BYTES bytes out of range"; exit 1; fi
-
-        # copy to a common name so later steps stay unchanged
         cp "$OUTPUT_FILE" ../nwss-output.txt
 
-    # --------------------------------------------------------------------
     - name: Merge output and sort
       shell: bash
       run: |
