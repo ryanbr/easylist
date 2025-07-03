@@ -1,4 +1,4 @@
-name: Run nwss (configs at :03, :30)
+name: Run nwss (configs at :03, :46)
 
 concurrency:
   group: nwss-cron
@@ -7,7 +7,7 @@ concurrency:
 on:
   schedule:
     - cron: "3 * * * *"       # config-clean.json
-    - cron: "30 * * * *"      # config-clean2.json
+    - cron: "46 * * * *"      # config-clean2.json
   workflow_dispatch:
     inputs:
       config:
