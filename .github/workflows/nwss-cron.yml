@@ -2,9 +2,9 @@ name: Run nwss (configs at :03, :30, :45)
 
 on:
   schedule:
-    - cron: "3  * * * *"      # config-clean.json
+    - cron: "3 * * * *"       # config-clean.json
     - cron: "30 * * * *"      # config-clean2.json
-    - cron: "45 * * * *"      # config-clean2.json (second pass)
+    - cron: "45 * * * *"      # second pass of config-clean2.json
   workflow_dispatch:
     inputs:
       config:
@@ -18,8 +18,8 @@ permissions:
 env:
   SCRIPT_REPO: ryanbr/network-scanner
   LIST_FILE:   easylist/easylist_adservers.txt
-  CONFIG_A_GPG: config-clean.json.gpg      # for minute 3
-  CONFIG_B_GPG: config-clean2.json.gpg     # for minutes 30 & 45
+  CONFIG_A_GPG: config-clean.json.gpg
+  CONFIG_B_GPG: config-clean2.json.gpg
 
 jobs:
   update:
@@ -61,46 +61,52 @@ jobs:
       env:
         PUPPETEER_EXECUTABLE_PATH: ${{ steps.setup_chrome.outputs.chrome-path }}
 
+    # ---------- MAIN STEP: decrypt & run with per-config output ----------
     - name: Decrypt config and run nwss.js
       env:
         PASSPHRASE_A: ${{ secrets.CONFIG_CLEAN_PASSPHRASE }}
         PASSPHRASE_B: ${{ secrets.CONFIG_CLEAN2_PASSPHRASE }}
         PUPPETEER_EXECUTABLE_PATH: ${{ steps.setup_chrome.outputs.chrome-path }}
       run: |
-        # ---- choose config --------------------------------------------
+        # pick config .gpg ------------------------------------------------
         if [ -n "$CONFIG_FROM_INPUT" ]; then
           CONFIG_GPG="$CONFIG_FROM_INPUT"
         elif [ "$SCHEDULE" = "3 * * * *" ]; then
           CONFIG_GPG="$CONFIG_A_GPG"
-        else                       # covers 30 & 45 minutes
+        else                         # 30 or 45 minute runs
           CONFIG_GPG="$CONFIG_B_GPG"
         fi
 
-        # ---- pick passphrase ------------------------------------------
+        # map to passphrase & output filename ----------------------------
         if [ "$CONFIG_GPG" = "$CONFIG_A_GPG" ]; then
           PASSPHRASE="$PASSPHRASE_A"
+          OUTPUT_FILE="output"
         else
           PASSPHRASE="$PASSPHRASE_B"
+          OUTPUT_FILE="output2"
         fi
 
-        # ---- decrypt ---------------------------------------------------
+        # decrypt --------------------------------------------------------
         cp "$CONFIG_GPG" nwss/
         cd nwss
         JSON_FILE="$(basename "$CONFIG_GPG" .gpg)"
         echo "$PASSPHRASE" | gpg --batch --yes --passphrase-fd 0 \
           --output "$JSON_FILE" --decrypt "$(basename "$CONFIG_GPG")"
 
-        # ---- run nwss --------------------------------------------------
+        # run nwss with unique output -----------------------------------
         node nwss.js \
           --clean-rules --remove-tempfiles --debug --dumpurls \
           --remove-dubes --color --custom-json "$JSON_FILE" \
-          -o eztvoutput
+          -o "$OUTPUT_FILE"
 
-        BYTES=$(stat -c%s eztvoutput)
+        BYTES=$(stat -c%s "$OUTPUT_FILE")
         if [ "$BYTES" -lt 10 ] || [ "$BYTES" -gt 10000 ]; then
-          echo "::error::eztvoutput size $BYTES bytes out of range"; exit 1; fi
-        cp eztvoutput ../nwss-output.txt
+          echo "::error::${OUTPUT_FILE} size $BYTES bytes out of range"; exit 1; fi
 
+        # copy to a common name so later steps stay unchanged
+        cp "$OUTPUT_FILE" ../nwss-output.txt
+
+    # --------------------------------------------------------------------
     - name: Merge output and sort
       shell: bash
       run: |
