@@ -1,4 +1,4 @@
-name: NWSS – config-clean2.json  (runs :50 past each hour)
+name: NWSS – config-clean2.json  (runs :42 past each hour)
 
 concurrency:
   group: nwss-config-clean2
@@ -6,7 +6,7 @@ concurrency:
 
 on:
   schedule:
-    - cron: "50 * * * *"      # minute 50
+    - cron: "42 * * * *"      # minute 50
   workflow_dispatch:
 
 permissions:
@@ -70,7 +70,7 @@ jobs:
           git config user.name  github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           git add "$LIST_FILE"
-          git commit -m "nwss(:30) update easylist_adservers.txt"
+          git commit -m "M: Automated update"
           git pull --rebase --autostash
           git push
 
