@@ -1,9 +1,15 @@
-name: Run nwss (configs at :03, :43)
+name: Run nwss (configs at :03, :46)
+
+# ---- NEW: queue overlapping runs, don't cancel them --------------
+concurrency:
+  group: nwss-cron            # all runs share the same lock
+  cancel-in-progress: false   # queue the next run until the lock is free
+# ------------------------------------------------------------------
 
 on:
   schedule:
     - cron: "3 * * * *"       # config-clean.json
-    - cron: "43 * * * *"      # config-clean2.json
+    - cron: "46 * * * *"      # config-clean2.json
   workflow_dispatch:
     inputs:
       config:
@@ -28,95 +34,97 @@ jobs:
       CONFIG_FROM_INPUT: ${{ github.event.inputs.config }}
 
     steps:
-    - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-    - uses: actions/setup-node@v4
-      with: { node-version: 20 }
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
 
-    - name: Install CLI tools
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y gnupg whois dnsutils curl
+      - name: Install CLI tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gnupg whois dnsutils curl
 
-    - name: Setup Google Chrome
-      id: setup_chrome
-      uses: browser-actions/setup-chrome@v1
-      with: { chrome-version: stable }
+      - name: Setup Google Chrome
+        id: setup_chrome
+        uses: browser-actions/setup-chrome@v1
+        with: { chrome-version: stable }
 
-    - name: Fetch nwss
-      env: { PUPPETEER_SKIP_DOWNLOAD: "1" }
-      run: |
-        git clone --depth 1 https://github.com/${SCRIPT_REPO}.git nwss
-        cd nwss
-        if [ -f package.json ]; then
-          ( [ -f package-lock.json ] || [ -f npm-shrinkwrap.json ] ) \
-            && npm ci --no-audit --no-fund \
-            || npm install --no-audit --no-fund
-        fi
+      - name: Fetch nwss
+        env: { PUPPETEER_SKIP_DOWNLOAD: "1" }
+        run: |
+          git clone --depth 1 https://github.com/${SCRIPT_REPO}.git nwss
+          cd nwss
+          if [ -f package.json ]; then
+            ( [ -f package-lock.json ] || [ -f npm-shrinkwrap.json ] ) \
+              && npm ci --no-audit --no-fund \
+              || npm install --no-audit --no-fund
+          fi
 
-    - run: |
-        echo "Chrome: $PUPPETEER_EXECUTABLE_PATH"
-        "$PUPPETEER_EXECUTABLE_PATH" --version
-      env:
-        PUPPETEER_EXECUTABLE_PATH: ${{ steps.setup_chrome.outputs.chrome-path }}
+      - run: |
+          echo "Chrome: $PUPPETEER_EXECUTABLE_PATH"
+          "$PUPPETEER_EXECUTABLE_PATH" --version
+        env:
+          PUPPETEER_EXECUTABLE_PATH: ${{ steps.setup_chrome.outputs.chrome-path }}
 
-    - name: Decrypt config and run nwss.js
-      env:
-        PASSPHRASE_A: ${{ secrets.CONFIG_CLEAN_PASSPHRASE }}
-        PASSPHRASE_B: ${{ secrets.CONFIG_CLEAN2_PASSPHRASE }}
-        PUPPETEER_EXECUTABLE_PATH: ${{ steps.setup_chrome.outputs.chrome-path }}
-      run: |
-        if [ -n "$CONFIG_FROM_INPUT" ]; then
-          CONFIG_GPG="$CONFIG_FROM_INPUT"
-        elif [ "$SCHEDULE" = "3 * * * *" ]; then
-          CONFIG_GPG="$CONFIG_A_GPG"
-        else
-          CONFIG_GPG="$CONFIG_B_GPG"
-        fi
+      - name: Decrypt config and run nwss.js
+        env:
+          PASSPHRASE_A: ${{ secrets.CONFIG_CLEAN_PASSPHRASE }}
+          PASSPHRASE_B: ${{ secrets.CONFIG_CLEAN2_PASSPHRASE }}
+          PUPPETEER_EXECUTABLE_PATH: ${{ steps.setup_chrome.outputs.chrome-path }}
+        run: |
+          # Choose config file
+          if [ -n "$CONFIG_FROM_INPUT" ]; then
+            CONFIG_GPG="$CONFIG_FROM_INPUT"
+          elif [ "$SCHEDULE" = "3 * * * *" ]; then
+            CONFIG_GPG="$CONFIG_A_GPG"
+          else
+            CONFIG_GPG="$CONFIG_B_GPG"
+          fi
 
-        if [ "$CONFIG_GPG" = "$CONFIG_A_GPG" ]; then
-          PASSPHRASE="$PASSPHRASE_A"
-          OUTPUT_FILE="output"
-        else
-          PASSPHRASE="$PASSPHRASE_B"
-          OUTPUT_FILE="output2"
-        fi
+          # Map to passphrase and output file
+          if [ "$CONFIG_GPG" = "$CONFIG_A_GPG" ]; then
+            PASSPHRASE="$PASSPHRASE_A"
+            OUTPUT_FILE="output"
+          else
+            PASSPHRASE="$PASSPHRASE_B"
+            OUTPUT_FILE="output2"
+          fi
 
-        echo "::notice::Using config: $CONFIG_GPG"
-        echo "::notice::Writing output to: $OUTPUT_FILE"
+          echo "::notice::Using config: $CONFIG_GPG"
+          echo "::notice::Writing output to: $OUTPUT_FILE"
 
-        cp "$CONFIG_GPG" nwss/
-        cd nwss
-        JSON_FILE="$(basename "$CONFIG_GPG" .gpg)"
-        echo "$PASSPHRASE" | gpg --batch --yes --passphrase-fd 0 \
-          --output "$JSON_FILE" --decrypt "$(basename "$CONFIG_GPG")"
+          cp "$CONFIG_GPG" nwss/
+          cd nwss
+          JSON_FILE="$(basename "$CONFIG_GPG" .gpg)"
+          echo "$PASSPHRASE" | gpg --batch --yes --passphrase-fd 0 \
+            --output "$JSON_FILE" --decrypt "$(basename "$CONFIG_GPG")"
 
-        node nwss.js \
-          --clean-rules --remove-tempfiles --debug --dumpurls \
-          --remove-dubes --color --custom-json "$JSON_FILE" \
-          -o "$OUTPUT_FILE"
+          node nwss.js \
+            --clean-rules --remove-tempfiles --debug --dumpurls \
+            --remove-dubes --color --custom-json "$JSON_FILE" \
+            -o "$OUTPUT_FILE"
 
-        BYTES=$(stat -c%s "$OUTPUT_FILE")
-        if [ "$BYTES" -lt 10 ] || [ "$BYTES" -gt 10000 ]; then
-          echo "::error::${OUTPUT_FILE} size $BYTES bytes out of range"; exit 1; fi
-        cp "$OUTPUT_FILE" ../nwss-output.txt
+          BYTES=$(stat -c%s "$OUTPUT_FILE")
+          if [ "$BYTES" -lt 10 ] || [ "$BYTES" -gt 10000 ]; then
+            echo "::error::${OUTPUT_FILE} size $BYTES bytes out of range"; exit 1; fi
+          cp "$OUTPUT_FILE" ../nwss-output.txt
 
-    - name: Merge output and sort
-      shell: bash
-      run: |
-        mkdir -p "$(dirname "$LIST_FILE")"
-        touch "$LIST_FILE"
-        { head -n 2 "$LIST_FILE"; cat nwss-output.txt; tail -n +3 "$LIST_FILE"; } > merged.tmp
-        mv merged.tmp "$LIST_FILE"
-        python3 FOP-nocommit.py easylist
+      - name: Merge output and sort
+        shell: bash
+        run: |
+          mkdir -p "$(dirname "$LIST_FILE")"
+          touch "$LIST_FILE"
+          { head -n 2 "$LIST_FILE"; cat nwss-output.txt; tail -n +3 "$LIST_FILE"; } > merged.tmp
+          mv merged.tmp "$LIST_FILE"
+          python3 FOP-nocommit.py easylist
 
-    - name: Commit changes
-      run: |
-        if git diff --quiet "$LIST_FILE"; then
-          echo "No changes – skipping commit"; exit 0; fi
-        git config user.name  "github-actions[bot]"
-        git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        git add "$LIST_FILE"
-        git commit -m "chore: update easylist_adservers.txt (nwss cron)"
-        git push
+      - name: Commit changes
+        run: |
+          if git diff --quiet "$LIST_FILE"; then
+            echo "No changes – skipping commit"; exit 0; fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$LIST_FILE"
+          git commit -m "chore: update easylist_adservers.txt (nwss cron)"
+          git push
 
