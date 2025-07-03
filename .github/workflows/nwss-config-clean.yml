@@ -1,0 +1,76 @@
+name: NWSS – config-clean.json  (runs :03 past each hour)
+
+concurrency:
+  group: nwss-config-clean
+  cancel-in-progress: false   # queue if an earlier run is still going
+
+on:
+  schedule:
+    - cron: "3 * * * *"       # minute 03
+  workflow_dispatch:          # manual trigger for testing
+
+permissions:
+  contents: write
+
+env:
+  SCRIPT_REPO: ryanbr/network-scanner
+  CONFIG_GPG: config-clean.json.gpg
+  OUTPUT_FILE: output
+  LIST_FILE: easylist/easylist_adservers.txt
+
+jobs:
+  run-nwss:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+
+      - name: Install CLI tools
+        run: sudo apt-get update && sudo apt-get install -y gnupg whois dnsutils curl
+
+      - name: Setup Google Chrome
+        id: chrome
+        uses: browser-actions/setup-chrome@v1
+        with: { chrome-version: stable }
+
+      - name: Clone nwss & install deps
+        env: { PUPPETEER_SKIP_DOWNLOAD: "1" }
+        run: |
+          git clone --depth 1 https://github.com/${{ env.SCRIPT_REPO }} nwss
+          cd nwss && npm install --no-audit --no-fund
+
+      - name: Decrypt config and run nwss.js
+        env:
+          PASS: ${{ secrets.CONFIG_CLEAN_PASSPHRASE }}
+          PUPPETEER_EXECUTABLE_PATH: ${{ steps.chrome.outputs.chrome-path }}
+        run: |
+          cp "$CONFIG_GPG" nwss/
+          cd nwss
+          JSON_FILE=config-clean.json
+          echo "$PASS" | gpg --batch --yes --passphrase-fd 0 -o "$JSON_FILE" -d "$CONFIG_GPG"
+          node nwss.js --clean-rules --remove-tempfiles --debug --dumpurls \
+                       --remove-dubes --color --custom-json "$JSON_FILE" \
+                       -o "$OUTPUT_FILE"
+          cp "$OUTPUT_FILE" ../nwss-output.txt
+
+      - name: Merge into list & sort
+        shell: bash
+        run: |
+          mkdir -p "$(dirname "$LIST_FILE")"
+          touch "$LIST_FILE"
+          { head -n 2 "$LIST_FILE"; cat nwss-output.txt; tail -n +3 "$LIST_FILE"; } > tmp && mv tmp "$LIST_FILE"
+          python3 FOP-nocommit.py easylist
+
+      - name: Commit / push
+        run: |
+          if git diff --quiet "$LIST_FILE"; then exit 0; fi
+          git config user.name  github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add "$LIST_FILE"
+          git commit -m "nwss(:03) update easylist_adservers.txt"
+          git pull --rebase --autostash
+          git push
+
