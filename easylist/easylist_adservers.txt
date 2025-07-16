@@ -5826,6 +5826,7 @@
 ||clickpupbit.com^
 ||clickreverendsickness.com^
 ||clicks4tc.com^
+||clickserviceflow.com^
 ||clicksgear.com^
 ||clicksmrtofr.com^
 ||clicksor.net^
@@ -7450,6 +7451,7 @@
 ||dicnkachuzca.com^
 ||dicouksa.com^
 ||dicpatfubo.com^
+||dicqhood.com^
 ||dictaaloha.top^
 ||dictatorsanguine.com^
 ||dictumstortil.com^
