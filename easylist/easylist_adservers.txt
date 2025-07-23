@@ -11461,6 +11461,7 @@
 ||grtaanmdu.com^
 ||grtexch.com^
 ||grtyj.com^
+||grubby-freedom.com^
 ||grubby-ratio.pro^
 ||grubsnuchale.com^
 ||grudgewallet.com^
@@ -26500,6 +26501,7 @@
 ||ttzmedia.com^
 ||tuaos.xyz^
 ||tubberlo.com^
+||tubbylay.com^
 ||tubecorp.com^
 ||tubecup.net^
 ||tubeelite.com^
