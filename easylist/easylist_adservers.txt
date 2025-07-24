@@ -1428,6 +1428,7 @@
 ||adsbar.online^
 ||adsbeard.com^
 ||adsbetnet.com^
+||adsbgusvt.com^
 ||adsblockersentinel.info^
 ||adsbtrk.com^
 ||adsbuddy.net^
