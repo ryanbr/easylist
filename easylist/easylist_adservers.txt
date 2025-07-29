@@ -29325,6 +29325,7 @@
 ||wpncdn.com^
 ||wpnetwork.eu^
 ||wpnjs.com^
+||wpnrffbuxtslo.com^
 ||wpnrtnmrewunrtok.xyz^
 ||wpnsrv.com^
 ||wpnxiswpuyrfn.icu^
