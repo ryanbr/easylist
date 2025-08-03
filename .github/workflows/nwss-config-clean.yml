@@ -51,7 +51,7 @@ jobs:
           cd nwss
           JSON_FILE=config-clean.json
           echo "$PASS" | gpg --batch --yes --passphrase-fd 0 -o "$JSON_FILE" -d "$CONFIG_GPG"
-          node nwss.js --clean-rules --remove-tempfiles --debug --dumpurls \
+          node nwss.js --clean-rules --max-concurrent 12 \
                        --remove-dubes --color --custom-json "$JSON_FILE" \
                        -o "$OUTPUT_FILE"
           cp "$OUTPUT_FILE" ../nwss-output.txt
