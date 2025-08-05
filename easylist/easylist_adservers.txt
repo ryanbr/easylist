@@ -26525,6 +26525,7 @@
 ||syncboostflow.com^
 ||syncclickflow.com^
 ||synccora.com^
+||syncedquarle.rest^
 ||synchroparomologyauditable.monster^
 ||syndenizen.shop^
 ||syndicatedsearch.goog^
