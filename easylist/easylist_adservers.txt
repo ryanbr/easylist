@@ -12104,6 +12104,7 @@
 ||granthihombres.qpon^
 ||granular-major.pro^
 ||granular-reflection.com^
+||granularcloud.com^
 ||grapefruitstarchbeep.com^
 ||grapseex.com^
 ||graptaupsi.net^
@@ -16668,6 +16669,7 @@
 ||ligcspstbrvgf.online^
 ||liggewaeful.com^
 ||lightfoot.top^
+||lightheartedbike.com^
 ||lightimpregnable.com^
 ||lightingstipulate.com^
 ||lightningbarrelwretch.com^
