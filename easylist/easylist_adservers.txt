@@ -24782,6 +24782,7 @@
 ||ripe-heart.com^
 ||ripeautobiography.com^
 ||ripeorder.com^
+||riperemote.com^
 ||riperequest.com^
 ||ripewhining.com^
 ||riphairgeno.com^
