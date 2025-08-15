@@ -1,0 +1,75 @@
+name: NWSS – manual cycles on self-hosted (WSL)
+
+on:
+  workflow_dispatch:
+    inputs:
+      duration_minutes:
+        description: "Total duration to keep running cycles (minutes)"
+        required: false
+        default: "480"  # 8 hours
+      max_cycles:
+        description: "Safety cap on number of cycles (0 = unlimited until time is up)"
+        required: false
+        default: "0"
+
+concurrency:
+  group: nwss-manual-cycles
+  cancel-in-progress: false  # queue if a run is already active
+
+permissions:
+  contents: write   # if your scripts commit/push to repos
+
+jobs:
+  run:
+    runs-on: [self-hosted, Linux, X64]  # matches your WSL runner
+    timeout-minutes: 720                # adjust higher if you set long durations
+    steps:
+      - name: Show runner context
+        run: |
+          echo "Host: $HOSTNAME"
+          uname -a
+          date
+          echo "Labels: $RUNNER_LABELS"
+
+      - name: Ensure wrapper is executable
+        run: chmod +x /home/fanboy/run-cycle.sh
+
+      - name: Run repeated cycles until duration
+        env:
+          DURATION_MINUTES: ${{ github.event.inputs.duration_minutes }}
+          MAX_CYCLES: ${{ github.event.inputs.max_cycles }}
+        run: |
+          set -euo pipefail
+          : "${DURATION_MINUTES:=480}"
+          : "${MAX_CYCLES:=0}"
+
+          # compute deadline
+          START=$(date +%s)
+          END=$(( START + DURATION_MINUTES*60 ))
+          CYCLE=0
+
+          echo "Running cycles for up to ${DURATION_MINUTES} minute(s)"
+          if [ "$MAX_CYCLES" != "0" ]; then
+            echo "Max cycles cap: $MAX_CYCLES"
+          fi
+
+          while :; do
+            NOW=$(date +%s)
+            if [ "$NOW" -ge "$END" ]; then
+              echo "Reached time limit (${DURATION_MINUTES} min). Stopping."
+              break
+            fi
+
+            CYCLE=$(( CYCLE + 1 ))
+            if [ "$MAX_CYCLES" != "0" ] && [ "$CYCLE" -gt "$MAX_CYCLES" ]; then
+              echo "Reached max cycles cap ($MAX_CYCLES). Stopping."
+              break
+            fi
+
+            echo "---- CYCLE $CYCLE (start $(date)) ----"
+            bash /home/fanboy/run-cycle.sh
+            echo "---- CYCLE $CYCLE complete (end $(date)) ----"
+          done
+
+          echo "All done at $(date)."
+
