@@ -6968,6 +6968,7 @@
 ||contemplatepuddingbrain.com^
 ||contemplatethwartcooperation.com^
 ||content-rec.com^
+||content-row.com^
 ||contentabc.com^
 ||contentango.online^
 ||contentaverage.pro^
@@ -13781,6 +13782,7 @@
 ||hopdream.com^
 ||hopefulbiologicaloverreact.com^
 ||hopefullyapricot.com^
+||hopefulrow.com^
 ||hopefulscore.pro^
 ||hopelessrolling.com^
 ||hopghpfa.com^
