@@ -7289,6 +7289,7 @@
 ||convertexperiments.com^
 ||convertmb.com^
 ||convictedpavementexisting.com^
+||convictionfoolishbathroom.com^
 ||convincedpotionwalked.com^
 ||convrse.media^
 ||convsweeps.com^
@@ -26048,6 +26049,7 @@
 ||rabblevalenone.com^
 ||racecadettyran.com^
 ||racedinvict.com^
+||racesmoulderstamp.com^
 ||raceusid.com^
 ||rachuhaijaip.net^
 ||racialdetrimentbanner.com^
