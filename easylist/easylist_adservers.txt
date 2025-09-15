@@ -2592,6 +2592,7 @@
 ||amazon-adsystem.com^
 ||amazon-cornerstone.com^
 ||ambaab.com^
+||ambeerskoo.com^
 ||ambie.site^
 ||ambientplatform.vn^
 ||ambiguouscovertrustless.com^
@@ -25327,6 +25328,7 @@
 ||pointroll.com^
 ||pointyglareproven.com^
 ||pointygrandma.com^
+||poised-layer.pro^
 ||poisegel.com^
 ||poisingalong.shop^
 ||poisism.com^
