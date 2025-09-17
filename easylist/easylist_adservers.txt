@@ -30305,6 +30305,7 @@
 ||slorpeyes.top^
 ||sloto.live^
 ||slow-bike.pro^
+||slow-inspector.pro^
 ||slowclick.top^
 ||slowdn.net^
 ||slowfulfoujdar.help^
