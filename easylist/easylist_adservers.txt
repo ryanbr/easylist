@@ -15303,6 +15303,7 @@
 ||hkcqpidtxaqkl.online^
 ||hkgkuppsnxhnq.online^
 ||hkichmshwxfgz.site^
+||hkikvxqlbyylq.store^
 ||hkilops.com^
 ||hkjfukkhwfepo.club^
 ||hkkelqybuad.xyz^
@@ -31239,6 +31240,7 @@
 ||smallestspoutmuffled.com^
 ||smallfunnybears.com^
 ||smarf.icu^
+||smart-sing.pro^
 ||smart-wp.com^
 ||smart1adserver.com^
 ||smart2cnjuh34jb.com^
