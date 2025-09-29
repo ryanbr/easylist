@@ -9432,6 +9432,7 @@
 ||disable-adverts.com^
 ||disableadblock.com^
 ||disablepovertyhers.com^
+||disableretaliate.com^
 ||disadvantagenaturalistrole.com^
 ||disappearanceinspiredscan.com^
 ||disappearancetickfilth.com^
@@ -10839,6 +10840,7 @@
 ||elastictrust.pro^
 ||elated-professional.pro^
 ||elatedcamera.com^
+||elatedpersonal.pro^
 ||elatedynast.com^
 ||elationsandindee.com^
 ||elaydark.com^
@@ -18532,6 +18534,7 @@
 ||kexarvamr.com^
 ||kexnkithcvs.com^
 ||kexojito.com^
+||kexylqmzedtiz.space^
 ||keydawnawe.com^
 ||keynotefool.com^
 ||keypush.net^
