@@ -5782,6 +5782,7 @@
 ||braunaalbert.help^
 ||brave-friend.com^
 ||brave-passage.pro^
+||brave-plane.pro^
 ||brave-village.com^
 ||braverycavalryoats.com^
 ||braverychinol.top^
