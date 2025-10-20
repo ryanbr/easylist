@@ -39697,6 +39697,7 @@
 ||wellmaderaise.pro^
 ||wellmov.com^
 ||welloff-official.pro^
+||welloff-royal.pro^
 ||welltodo-basis.pro^
 ||welltodo-type.com^
 ||welltodoconstant.pro^
