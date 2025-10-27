@@ -15182,6 +15182,7 @@
 ||goobakocaup.com^
 ||good-ads-online.com^
 ||good-investment.pro^
+||good-risk.pro^
 ||goodadvert.ru^
 ||goodandsoundcontent.com^
 ||goodbusinesspark.com^
@@ -34899,6 +34900,7 @@
 ||sprunglurk.com^
 ||sprungstorm.com^
 ||spry-cat.com^
+||spry-trick.com^
 ||spsiqdfdkjgqv.space^
 ||spsrpjke.com^
 ||spssopjnqtcwe.website^
