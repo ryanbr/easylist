@@ -15530,6 +15530,7 @@
 ||griphusveneti.cyou^
 ||gripping-bread.com^
 ||gripping-currency.pro^
+||gripping-customer.pro^
 ||gripping-mountain.pro^
 ||gripping-refrigerator.pro^
 ||grippingexpert.com^
