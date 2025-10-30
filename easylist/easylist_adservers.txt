@@ -11801,6 +11801,7 @@
 ||elliptical-mode.pro^
 ||elliptical-schedule.com^
 ||ellipticalfishing.pro^
+||ellipticalpool.com^
 ||ellipticaltrack.com^
 ||ellipticalwalk.pro^
 ||ellsconuses.com^
@@ -43666,6 +43667,7 @@
 ||zitzithquaff.top^
 ||zivtux.com^
 ||ziwauhooju.net^
+||ziweitdiehryd.space^
 ||ziwyicyifcroh.space^
 ||zixtcgkovehow.store^
 ||ziyhd.fun^
