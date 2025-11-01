@@ -7080,6 +7080,7 @@
 ||cdnpf.com^
 ||cdnpsh.com^
 ||cdnquality.com^
+||cdnschools.com^
 ||cdntechone.com^
 ||cdntestlp.info^
 ||cdntrf.com^
