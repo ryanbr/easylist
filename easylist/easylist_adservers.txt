@@ -15740,6 +15740,7 @@
 ||grizzled-client.pro^
 ||grizzled-reality.pro^
 ||grizzledcourage.pro^
+||grizzledprogress.com^
 ||grjqvelblmzmu.website^
 ||grknnolhmwypkn.com^
 ||grmciysmhnyaj.site^
