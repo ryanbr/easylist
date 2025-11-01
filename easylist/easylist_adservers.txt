@@ -41221,6 +41221,7 @@
 ||welldocumentedlock.pro^
 ||welldocumentedphoto.pro^
 ||wellhello.com^
+||wellinformed-combination.com^
 ||wellliveblog.com^
 ||welllwrite.com^
 ||wellmadecampaign.com^
