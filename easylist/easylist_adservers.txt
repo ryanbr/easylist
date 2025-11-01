@@ -39263,6 +39263,7 @@
 ||urldelivery.com^
 ||urlgone.com^
 ||urlhausa.com^
+||urlmkktpnfc.com^
 ||urnbduat.com^
 ||urnglvrhsumnq.space^
 ||urnwhereabouts.com^
