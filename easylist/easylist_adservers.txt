@@ -41855,6 +41855,7 @@
 ||wiry-initial.pro^
 ||wiryelection.pro^
 ||wise-bend.pro^
+||wise-front.com^
 ||wisej1355.com^
 ||wiselyheathenbucket.com^
 ||wisenoutlip.cyou^
