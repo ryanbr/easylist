@@ -18585,6 +18585,7 @@
 ||imasdk.googleapis.com^
 ||imbet.site^
 ||imbfsidnchope.site^
+||imbosvatakyvt.site^
 ||imbuteresaws.cyou^
 ||imcdn.pro^
 ||imcvxgbw.com^
