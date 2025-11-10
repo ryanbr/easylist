@@ -2992,6 +2992,7 @@
 ||amp.services^
 ||ampbnifxs.com^
 ||ampcr.io^
+||ample-speaker.pro^
 ||amplestiortn.top^
 ||amplifynervesestate.com^
 ||amplitudesheriff.com^
