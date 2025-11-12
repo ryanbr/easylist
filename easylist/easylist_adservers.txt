@@ -28406,6 +28406,7 @@
 ||optimal-neat.pro^
 ||optimalcelebration.pro^
 ||optimistic-grade.pro^
+||optimistic-truck.pro^
 ||optimizepro.online^
 ||optimizesocial.com^
 ||optimizesrv.com^
