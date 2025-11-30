@@ -11039,6 +11039,7 @@
 ||distant-branch.pro^
 ||distant-front.pro^
 ||distinctpiece.pro^
+||distinctteaching.pro^
 ||distorted-commercial.pro^
 ||distorted-environment.pro^
 ||distortededucation.pro^
@@ -34293,6 +34294,7 @@
 ||questionneuroticgrief.com^
 ||queuequalificationtreasure.com^
 ||qufwiapfhddni.site^
+||qufzoiycxutsn.website^
 ||qugwavmsjvlnf.website^
 ||quickads.net^
 ||quickerapparently.com^
