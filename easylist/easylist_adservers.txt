@@ -1645,6 +1645,7 @@
 ||adblockanalytics.com^
 ||adblockerprofessional.com^
 ||adbmi.com^
+||adbogrtalw.com^
 ||adbooth.com^
 ||adbox.lv^
 ||adbpage.com^
