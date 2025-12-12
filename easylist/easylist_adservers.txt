@@ -7803,6 +7803,7 @@
 ||cdnapi.net^
 ||cdnativ.com^
 ||cdnativepush.com^
+||cdnbanleksagq.online^
 ||cdnbit.com^
 ||cdnfimgs.com^
 ||cdnflex.me^
@@ -16638,6 +16639,7 @@
 ||ghzigitdvmsbb.site^
 ||ghzxqtvqjybuj.online^
 ||gialamebxneob.space^
+||giant-league.pro^
 ||giant-orange.pro^
 ||giantadblocker.com^
 ||giantaffiliates.com^
