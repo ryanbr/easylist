@@ -14437,6 +14437,7 @@
 ||faroff-bone.pro^
 ||faroff-selection.pro^
 ||faroffteaching.pro^
+||farriercategoryidentifier.com^
 ||farteniuson.com^
 ||fartmoda.com^
 ||farvbhfy.com^
