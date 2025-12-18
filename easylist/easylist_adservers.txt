@@ -1161,6 +1161,7 @@
 ||a-mo.net^
 ||a-mx.com^
 ||a-waiting.com^
+||a-zzz.com^
 ||a00s.net^
 ||a065b8f217.com^
 ||a06bbd98194c252.com^
@@ -37323,6 +37324,7 @@
 ||rfmdbzxbj.com^
 ||rfmgepktjvlfi.website^
 ||rfncbjaggrfho.space^
+||rfovnizqp.com^
 ||rfpjoviqbmecn.online^
 ||rfpmudsnyeuhe.space^
 ||rfqgq1uzto7gctfih2c74h5.cfd^
