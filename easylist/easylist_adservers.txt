@@ -4631,6 +4631,7 @@
 ||awept.com^
 ||aweresolve.com^
 ||awesome-blocker.com^
+||awesome-wait.pro^
 ||awesomeprizedrive.co^
 ||awesomeststuff.com^
 ||awesomewash.pro^
