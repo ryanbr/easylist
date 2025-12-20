@@ -1,5 +1,6 @@
 ! Non-flagged (Generic blocks)
 ||0019x.com^
+||00427011ae.com^
 ||00609c257b.com^
 ||00e2120672.com^
 ||00f8c4bb25.com^
@@ -927,6 +928,7 @@
 ||7bchhgh.de^
 ||7bd9a61155.com^
 ||7c13b412e9.com^
+||7c1569a605.com^
 ||7c23586009.com^
 ||7c52629d53.com^
 ||7c5734761f.com^
@@ -1044,6 +1046,7 @@
 ||8n193nm29qn8kg57oghj.cfd^
 ||8n67t.com^
 ||8nugm4l6j.com^
+||8pi57n9qrrh28my.cfd^
 ||8po6fdwjsym3.com^
 ||8qi52yl8lqp98rbbvx9o882m6xuo3rxx.cfd^
 ||8r9hoilt64he315cxowoo223cy.cfd^
@@ -8066,6 +8069,7 @@
 ||cemaolocavmti.website^
 ||cematuran.com^
 ||cementexemplifybuddy.com^
+||cemepbqw.com^
 ||cemeteryloinrespirator.com^
 ||cemiocw.com^
 ||cemtemtaiglu.net^
@@ -35309,6 +35313,7 @@
 ||qbkraweaoemzb.top^
 ||qbkraweaoeoew.top^
 ||qbkraweaoeozo.top^
+||qbkraweaoeqbb.top^
 ||qbkraweaoezbj.top^
 ||qbkraweaoezqr.top^
 ||qbkustbkzoheu.site^
