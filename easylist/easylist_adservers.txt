@@ -4510,6 +4510,7 @@
 ||authimtaiwoor.com^
 ||authoaxoms.net^
 ||authognu.com^
+||authoritativegrandchildpause.com^
 ||authoritiesemotional.com^
 ||authorizevanquishcovering.com^
 ||auto-deploy.pages.dev^
@@ -29380,6 +29381,7 @@
 ||nautical-month.pro^
 ||nauticalgelatine.com^
 ||nauticalhair.com^
+||nauticalregion.pro^
 ||nauticalspecialist.pro^
 ||navaidaosmic.top^
 ||navarsrotunda.life^
