@@ -27989,6 +27989,7 @@
 ||medgoodfood.com^
 ||media-412.com^
 ||media-general.com^
+||media-imdb.com^
 ||media-sapiens.com^
 ||media6degrees.com^
 ||mediacpm.com^
