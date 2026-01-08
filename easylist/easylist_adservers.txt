@@ -29376,6 +29376,7 @@
 ||moviead55.ru^
 ||movieexhibit.com^
 ||moviefull.net^
+||movieizle.net^
 ||moviepress.net^
 ||movierecycle.com^
 ||movies-watch-time.club^
