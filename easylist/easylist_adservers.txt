@@ -29608,6 +29608,7 @@
 ||movieexhibit.com^
 ||moviefull.net^
 ||movieizle.net^
+||moviemoron.com^
 ||moviepress.net^
 ||movierecycle.com^
 ||movies-watch-time.club^
