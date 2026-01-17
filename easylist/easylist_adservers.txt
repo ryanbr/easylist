@@ -5310,6 +5310,7 @@
 ||bacrtcqhpkmbp.online^
 ||bad-charge.pro^
 ||bad-return.pro^
+||bad-suggestion.pro^
 ||badgeclodvariable.com^
 ||badgegirdle.com^
 ||badgeimpliedblind.com^
@@ -10506,6 +10507,7 @@
 ||csfuiuwdubtyr.online^
 ||csiiojbcgpf.com^
 ||csirqafotiwwkk.com^
+||csjdhxlelvqpa.site^
 ||csjggncfpbhnq.space^
 ||csjokezuqdbdy.online^
 ||cskcnipgkq.club^
