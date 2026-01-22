@@ -1940,6 +1940,7 @@
 ||adelphic.net^
 ||adenza.dev^
 ||adept-door.pro^
+||adept-peak.pro^
 ||adept-shock.pro^
 ||adevbom.com^
 ||adevppl.com^
@@ -3159,6 +3160,7 @@
 ||alespeonor.com^
 ||alesrepreswsenta.com^
 ||aletrenhegenmi.com^
+||alevjmyqigxeu.online^
 ||alexabyte.site^
 ||alexatracker.com^
 ||alexintol.shop^
