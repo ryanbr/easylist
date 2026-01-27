@@ -993,6 +993,7 @@
 ||76359a95dd.com^
 ||766935bca8.com^
 ||768e7f3194.com^
+||769fb58db3.com^
 ||76dfe8543f.com^
 ||76e3d5200b.com^
 ||76ec5a61ac.com^
