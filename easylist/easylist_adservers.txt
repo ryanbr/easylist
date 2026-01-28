@@ -4560,6 +4560,7 @@
 ||atknvcdnfckpb.website^
 ||atkoxjrndvsct.online^
 ||atkuawveoazve.store^
+||atkyletwcywfi.online^
 ||atlastwo.com^
 ||atlgixgeuppua.website^
 ||atlhjtmjrj.com^
@@ -18904,6 +18905,7 @@
 ||goobakocaup.com^
 ||good-ads-online.com^
 ||good-investment.pro^
+||good-replacement.pro^
 ||good-risk.pro^
 ||goodadvert.ru^
 ||goodandsoundcontent.com^
