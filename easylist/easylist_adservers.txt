@@ -7881,6 +7881,7 @@
 ||bwortacmib.com^
 ||bwoscenc.com^
 ||bwqkqkhfvwppy.website^
+||bwqmspfrpiwze.website^
 ||bwqpdvvcxuzwi.website^
 ||bwqteixclqazk.store^
 ||bwrjmupugpabj.com^
@@ -10528,6 +10529,7 @@
 ||creaseinprofitst.com^
 ||creatablegluesurvival.com^
 ||creative-bars1.com^
+||creative-message.pro^
 ||creative-serving.com^
 ||creative-stat1.com^
 ||creative.nangilive.com^
