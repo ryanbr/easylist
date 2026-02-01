@@ -22121,6 +22121,7 @@
 ||idealistic-car.pro^
 ||idealistic-tip.pro^
 ||idealistic-title.pro^
+||idealisticfather.pro^
 ||idealisticschedule.pro^
 ||idealmedia.io^
 ||ideapassage.com^
@@ -55064,6 +55065,7 @@
 ||ymzdzwpmsgiji.online^
 ||ynbgjroxqcyrr.site^
 ||yndnnwoidueqsd.com^
+||ynemqgebtqzkc.site^
 ||ynfanslkhrdtn.space^
 ||ynhafvxotzgyw.online^
 ||ynipuxptcx.com^
