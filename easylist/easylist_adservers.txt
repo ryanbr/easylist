@@ -9690,6 +9690,7 @@
 ||clotheswer.com^
 ||clothmexican.com^
 ||cloudflare.solutions^
+||cloudformix.net^
 ||cloudfrale.com^
 ||cloudiiv.com^
 ||cloudimagesa.com^
