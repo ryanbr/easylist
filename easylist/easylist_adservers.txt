@@ -17416,6 +17416,7 @@
 ||frosty-anybody.pro^
 ||frosty-presence.com^
 ||frostyback.com^
+||frostystatus.pro^
 ||frothadditions.com^
 ||frottedpoddle.shop^
 ||frozen-management.pro^
@@ -54310,6 +54311,7 @@
 ||xmlgrab.com^
 ||xmlking.com^
 ||xmllover.com^
+||xmlpostback.com^
 ||xmlppcbuzz.com^
 ||xmlrtb.com^
 ||xmlwiz.com^
