@@ -1086,6 +1086,7 @@
 ||7me0ssd6.de^
 ||7ng6v3lu3c.execute-api.us-east-1.amazonaws.com^
 ||7nt9p4d4.de^
+||7ooht8tc3xtukbfl1mni9qopon.cfd^
 ||7p57h86gnt6k7gu1lwcq.cfd^
 ||7thvyebqhu7956.cfd^
 ||7wmkm3837trf1lobgo.cfd^
@@ -15492,6 +15493,7 @@
 ||ewmvqxprtnvv.com^
 ||ewnc611xxgn188vekffvbne.cfd^
 ||ewnkfnsajr.com^
+||ewojctxsvsth.com^
 ||ewokjbkclwalb.online^
 ||ewotranwrieqs.online^
 ||ewouldlookina.org^
@@ -48186,6 +48188,7 @@
 ||ttrk.io^
 ||ttromlljd.com^
 ||tttcraukuyqff.one^
+||tttprfmlosbiv.com^
 ||tttrehcqzoguv.online^
 ||ttudarqrldyoc.site^
 ||ttufskxweb.com^
