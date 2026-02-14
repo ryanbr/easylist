@@ -17594,6 +17594,7 @@
 ||frightening-link.pro^
 ||frighteningsignal.pro^
 ||frigid-wait.pro^
+||frigidhour.pro^
 ||frillermonger.shop^
 ||frillyearth.com^
 ||frillyinspector.com^
@@ -52012,6 +52013,7 @@
 ||vqqjqbkzclwav.website^
 ||vqqlscgw.com^
 ||vqrdiduoqypac.site^
+||vqrippkxjduqb.website^
 ||vqrozzojjlool.top^
 ||vqrozzojjlwbz.top^
 ||vqrozzojjvjow.top^
