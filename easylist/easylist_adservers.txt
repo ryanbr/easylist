@@ -25029,6 +25029,7 @@
 ||joint-blame.pro^
 ||joint-hurry.pro^
 ||joint-natural.pro^
+||jointcap.pro^
 ||jojqyxrmh.com^
 ||jojrpqybjmawvn.com^
 ||jolecyclist.com^
@@ -34451,6 +34452,7 @@
 ||ohgriforkvan.com^
 ||ohgwkaedrbujt.website^
 ||ohgwpxkwvz.com^
+||ohijzppabtqsb.website^
 ||ohiotinety.com^
 ||ohjfacva.com^
 ||ohjgpaxixal.com^
