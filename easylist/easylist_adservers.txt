@@ -24569,6 +24569,7 @@
 ||jadcenter.com^
 ||jaded-review.pro^
 ||jaded-spell.pro^
+||jadedblame.pro^
 ||jadedguidance.pro^
 ||jadfupda.com^
 ||jadgmegizma.com^
