@@ -771,6 +771,7 @@
 ||4hp2qtu8b43y43385xikr.cfd^
 ||4iazoa.xyz^
 ||4io5xpkjcz9hf7co.cfd^
+||4irq8we54h89h8b9y431zgceu3ofyn3mu.cfd^
 ||4k7kca7aj0s4.top^
 ||4k86gczqhjwp8qcu1c.cfd^
 ||4kcortr993u5yycb1.cfd^
@@ -19145,6 +19146,7 @@
 ||ghcivmnbxhkht.store^
 ||ghdvmofvjgnhr.store^
 ||ghegbzfntqlsw.space^
+||ghfqgcrpuoyese.com^
 ||ghhidmrlpiogcg.com^
 ||ghhonwyrbqmbbt.com^
 ||ghhxnabvunfey.store^
