@@ -832,6 +832,7 @@
 ||50d46dda05.com^
 ||50deb82526.com^
 ||50f0ac5daf.com^
+||50services.net^
 ||5101c555fc.com^
 ||510a62f1a2.com^
 ||5134d63209.com^
