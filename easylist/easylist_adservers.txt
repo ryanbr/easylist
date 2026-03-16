@@ -1166,6 +1166,7 @@
 ||7a22a10c2e.com^
 ||7a2731790d.com^
 ||7a28c1843f.com^
+||7a3c825c8f.com^
 ||7a416c3a61.com^
 ||7abdc2aae1.com^
 ||7amz.com^
@@ -11124,6 +11125,7 @@
 ||crbrdwegmonc.com^
 ||crbvzgtwpp.com^
 ||crcgrilses.com^
+||crclvymqigptwsc.com^
 ||crcuvttkk.com^
 ||crcwmxyhc.com^
 ||crdefault.link^
@@ -11872,6 +11874,7 @@
 ||d49ae3cc10.com^
 ||d4dc5a447c.com^
 ||d5465f9d11.com^
+||d5501528b5.com^
 ||d57b6d1e63.com^
 ||d591f0b765.com^
 ||d59419bbc9.com^
@@ -18874,6 +18877,7 @@
 ||g41pk8kn9vnc8j.cfd^
 ||g5hxng7tc1kht66b3rro74.cfd^
 ||g67wbqj199umx36giq4rcl3p.cfd^
+||g863kn8onmtxuxtr9bxj8bmeq.cfd^
 ||g8tor.com^
 ||gaaekexcvdkur.site^
 ||gaaixjuvuus.com^
