@@ -31356,6 +31356,7 @@
 ||macro.adnami.io^
 ||mactracorbe.qpon^
 ||madadsmedia.com^
+||madauthor.pro^
 ||madcheddar.net^
 ||madcpms.com^
 ||maddencrumble.com^
