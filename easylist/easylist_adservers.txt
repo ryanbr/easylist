@@ -8939,6 +8939,7 @@
 ||cargoattachment.com^
 ||caricaturechampionshipeye.com^
 ||caring-amount.pro^
+||caring-might.pro^
 ||caring-tune.pro^
 ||caringmake.pro^
 ||caringpast.com^
