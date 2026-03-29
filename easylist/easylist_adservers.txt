@@ -18560,6 +18560,7 @@
 ||frigid-wait.pro^
 ||frigidhour.pro^
 ||frillermonger.shop^
+||frilly-celebration.pro^
 ||frillyearth.com^
 ||frillyinspector.com^
 ||frillystyle.pro^
