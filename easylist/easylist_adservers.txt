@@ -7999,6 +7999,7 @@
 ||briefnegotiation.pro^
 ||briefready.com^
 ||briefrush.pro^
+||briefwoman.pro^
 ||brigadedelegatesandbox.com^
 ||brightcomparison.pro^
 ||brighteroption.com^
