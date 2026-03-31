@@ -6110,6 +6110,7 @@
 ||barrackmuppetunhealthy.com^
 ||barrackssponge.com^
 ||barren-study.pro^
+||barren-unit.pro^
 ||barrenhatrack.com^
 ||barrenhead.pro^
 ||barricadecourse.com^
