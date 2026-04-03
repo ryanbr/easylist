@@ -15110,6 +15110,7 @@
 ||edttwm.com^
 ||edu-lib.com^
 ||educated-body.pro^
+||educated-chip.pro^
 ||educatedcoercive.com^
 ||educatedmonitor.pro^
 ||educedsteeped.com^
