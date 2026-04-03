@@ -48858,6 +48858,7 @@
 ||sturdy-bus.pro^
 ||sturdyarrival.com^
 ||sturdyassociate.pro^
+||sturdycow.pro^
 ||stvbiopr.net^
 ||stvifods.com^
 ||stvkr.com^
