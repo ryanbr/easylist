@@ -34380,6 +34380,7 @@
 ||natsdk.com^
 ||nattepush.com^
 ||naturalbrain.pro^
+||naturaldump.pro^
 ||naturebunk.com^
 ||natzoiufypcen.space^
 ||naugaugair.com^
