@@ -460,6 +460,7 @@
 ||2d439ab93e.com^
 ||2d5ac65613.com^
 ||2d6g0ag5l.de^
+||2d86bbe43f.com^
 ||2de65ef3dd.com^
 ||2e5e4544c4.com^
 ||2e68bd0a8b.com^
@@ -713,6 +714,7 @@
 ||3qfe1gfa.de^
 ||3redlightfix.com^
 ||3tn9czz7qmog33whf5.cfd^
+||3ve8tk6lpz1k5fz4z.cfd^
 ||3vmv6fcl3olf8y5ocm.cfd^
 ||3vpb62tkymq85jj4fpw8yt7mnk.cfd^
 ||3vynh4rw9vnr8z.cfd^
@@ -1204,6 +1206,7 @@
 ||73a435bfaf.com^
 ||73be0a6d8a.com^
 ||73c7ef34a3.com^
+||73e3c9d09d.com^
 ||73fa81c29d.com^
 ||73fbab0eb4.com^
 ||73i9ik6p997n8o6.cfd^
@@ -33585,6 +33588,7 @@
 ||mqbjdnsnnpcrko.com^
 ||mqbufkkpjllky.com^
 ||mqbwqsvxfwzos.site^
+||mqcbifspfrpn.com^
 ||mqdctovwgbgpik.com^
 ||mqdownload.com^
 ||mqedledjjjdad.website^
