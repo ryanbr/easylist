@@ -44898,6 +44898,7 @@
 ||ripe-comparison.pro^
 ||ripe-heart.com^
 ||ripeautobiography.com^
+||ripegoal.pro^
 ||ripeorder.com^
 ||ripepatience.pro^
 ||riperemote.com^
