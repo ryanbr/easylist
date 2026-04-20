@@ -54,6 +54,7 @@
 ||095f2fc218.com^
 ||096243309f.com^
 ||0980b6e8fe.com^
+||09e07385f6.com^
 ||0a4ebd39b2.com^
 ||0a7baba6f0.com^
 ||0af2a962b0102942d9a7df351b20be55.com^
@@ -1459,6 +1460,7 @@
 ||8eynukgb9h2txj4nfp3jkm7vtg8mgxy.cfd^
 ||8f17d89ec7.com^
 ||8f4c607ea0.com^
+||8f998710bd.com^
 ||8fbfeb27e6.com^
 ||8ffea74ec5.com^
 ||8fju4hc6v65eohunzg.cfd^
@@ -58266,6 +58268,7 @@
 ||writehopedcrashed.com^
 ||writhehawm.com^
 ||writhingwitness.pro^
+||wrjq4mv3pyk8my2of.cfd^
 ||wrkleelmiejc.com^
 ||wrlqczbawadnf.online^
 ||wrmoadl.guru^
