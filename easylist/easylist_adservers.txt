@@ -1497,6 +1497,7 @@
 ||8wz758q9w8grex6t84k.cfd^
 ||8wzk7c6ynrgvmy.cfd^
 ||8y83euwehq669vq9.cfd^
+||8yigbkjbi62e2bb.cfd^
 ||8yo199env92eqkc.cfd^
 ||8ytm3vnjc3fhw7nypxuhwuczfbf.cfd^
 ||8z7u9hp771g4copqel.cfd^
@@ -7140,6 +7141,7 @@
 ||bilsyndication.com^
 ||biltalsersoolom.com^
 ||biltickeegy.net^
+||bimongtrowman.com^
 ||bimouecctgacs.store^
 ||bin-layer.ru^
 ||bin-tds.site^
