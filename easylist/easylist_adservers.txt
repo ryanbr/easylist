@@ -32369,6 +32369,7 @@
 ||m7be4f5243x1p849x387xw7hcmwl.cfd^
 ||m7gb9hrp3b23hco.cfd^
 ||m84pwz8i6jke67.cfd^
+||m87c8g59lphbouq3m4jyj.cfd^
 ||m87eg41ut5f4qxxw.cfd^
 ||m93ijm3p1jeypwrxjqtvh62kutrpyqb.cfd^
 ||m9g5nqvt7h5v95.cfd^
@@ -43343,6 +43344,7 @@
 ||qktfhnxogqx.com^
 ||qktmhrkfhdyrm.com^
 ||qktpyrtr.com^
+||qktwjmrs.com^
 ||qkuogxqm.com^
 ||qkuwfhstvjagy.com^
 ||qkvfnjfhdparr.store^
