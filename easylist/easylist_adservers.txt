@@ -9042,6 +9042,7 @@
 ||c81cd15a01.com^
 ||c82uw686gugvt3ngvf.cfd^
 ||c83eyb3l7v3u892cchc9b5rc691bf4om9txvrx.cfd^
+||c83tof2h2uw22ehonz.cfd^
 ||c84c10fe3d.com^
 ||c8841fd6e9.com^
 ||c8aae076f1.com^
@@ -45738,6 +45739,7 @@
 ||rgvxfkrhnovqp.store^
 ||rgwhbjbbfwitt.site^
 ||rgwxqakkddxuq.com^
+||rgyusuytcir.com^
 ||rgzqikmnfxble.website^
 ||rh57iux7o2jm93ooxc2plbkf8r7g2oc.cfd^
 ||rhadiigqtkzcd.website^
