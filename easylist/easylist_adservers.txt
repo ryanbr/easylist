@@ -1052,6 +1052,7 @@
 ||5db016ba6b.com^
 ||5dede791d0.com^
 ||5e08c93d2d.com^
+||5e14ab617d.com^
 ||5e1b8e9d68.com^
 ||5e48fxmxvquwuv5urjiwr66.cfd^
 ||5e49fd4c08.com^
@@ -1295,6 +1296,7 @@
 ||7416e71cb8.com^
 ||742ba1f9a9.com^
 ||743fa12700.com^
+||74cc9179e1.com^
 ||74kmgxxjxpw5mu.cfd^
 ||74x4er4kpl8pxek327.cfd^
 ||756048c1ae.com^
@@ -1541,6 +1543,7 @@
 ||8kce4pyu2bjkol3i2xvmfp4lxqjcg.cfd^
 ||8kj1ldt1.de^
 ||8lp23wktrwi5rhuh2tf.cfd^
+||8mn89m4miinf1ubjk.cfd^
 ||8n193nm29qn8kg57oghj.cfd^
 ||8n67t.com^
 ||8nugm4l6j.com^
@@ -26127,6 +26130,7 @@
 ||isxtltbhwxud.com^
 ||isyimywasmedru.com^
 ||isyrkltomfp.com^
+||isyvamyud.com^
 ||iszbchgvidvhw.space^
 ||iszrrgjxekmas.website^
 ||iszrsxcbxgzaw.online^
