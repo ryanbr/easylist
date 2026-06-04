@@ -16,6 +16,7 @@
 ||024e3caef2.com^
 ||0256d2ea99.com^
 ||029519cbdc.com^
+||02e4a0ea60.com^
 ||0300acdff2.com^
 ||033586410b.com^
 ||039858f297.com^
@@ -1657,6 +1658,7 @@
 ||8yigbkjbi62e2bb.cfd^
 ||8yo199env92eqkc.cfd^
 ||8ytm3vnjc3fhw7nypxuhwuczfbf.cfd^
+||8yzpw23yr3nxvtwymtt2wn.cfd^
 ||8z7u9hp771g4copqel.cfd^
 ||8z7wm6jwp29mvyzypp7oyok4obpw9k.cfd^
 ||8zf8lic5x4intf2.cfd^
@@ -18250,6 +18252,7 @@
 ||fbzqfomrzgudj.online^
 ||fc3ppv.xyz^
 ||fc5d7c4624.com^
+||fc89e6593f.com^
 ||fc9e63a7c3.com^
 ||fcajvqmwhkclw.com^
 ||fcb6adad17.com^
@@ -27796,6 +27799,7 @@
 ||jitanvlw.com^
 ||jitgibmibpayc.online^
 ||jitneurpanther.click^
+||jitneydopatta.shop^
 ||jitoassy.com^
 ||jitrllwkfsmfto.com^
 ||jitrocandler.com^
