@@ -809,6 +809,7 @@
 ||3redlightfix.com^
 ||3tcrzmb1pvwo86m.cfd^
 ||3tn9czz7qmog33whf5.cfd^
+||3uv4e4ozrekc56zx1jjwfbugpq1i275.cfd^
 ||3ve8tk6lpz1k5fz4z.cfd^
 ||3vmv6fcl3olf8y5ocm.cfd^
 ||3vpb62tkymq85jj4fpw8yt7mnk.cfd^
@@ -1491,6 +1492,7 @@
 ||7f3adt.com^
 ||7f89d90c6f.com^
 ||7fc0966988.com^
+||7ff9dd031a.com^
 ||7fhginl5cekq8ykr5hc9bn26xwb.cfd^
 ||7fkm2r4pzi.com^
 ||7focry12ylhr5k5rv.cfd^
@@ -6328,6 +6330,7 @@
 ||b7dff0913b.com^
 ||b7mtw8ionw6qoz8cu4g7xcpv.cfd^
 ||b7nvtp6ef62ioe6ro4rj.cfd^
+||b8036a31fa.com^
 ||b84dd0b7a1.com^
 ||b84f93087e.com^
 ||b8bd2d84d4.com^
@@ -9111,6 +9114,7 @@
 ||bwgtptgihi.com^
 ||bwhhcuikrgvhs.online^
 ||bwhuyauklndvt.online^
+||bwkcomucfkfpgl.com^
 ||bwkwfuwfv.xyz^
 ||bwldkamba.com^
 ||bwlmgcvlifbuhb.com^
