@@ -465,7 +465,7 @@ event.educathai.com##+js(set-cookie, educathai_educa2024_cookie_accepted, accept
 loja.paulus.com.br##+js(set-cookie, lgpd-paulus-accepted-paulusloja, true)
 loja.paulus.com.br##+js(set-cookie, lgpd-paulus-first-view-paulusloja, true)
 neliosoftware.com##+js(set-cookie, nelioCookiesAccepted, true)
-uva.nl##+js(set-cookie, cookie_consent_level, 1)
+www.uva.nl##+js(set-cookie, cookie_consent_level, 1)
 visti.it##+js(set-cookie, acceptcookies, 1)
 kissnofrog.com##+js(set-cookie, cdisc, true, , reload, 1)
 allegro.*##+js(set-cookie, gdpr_permission_given, 0)
