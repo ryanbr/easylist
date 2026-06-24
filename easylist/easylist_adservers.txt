@@ -7504,6 +7504,7 @@
 ||bidclickmedia.com^
 ||bidderads.com^
 ||biddingfitful.com^
+||bidensfilter.qpon^
 ||bidgetfencing.cyou^
 ||bidiology.com^
 ||bidseeghifoo.net^
