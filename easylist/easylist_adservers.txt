@@ -9707,6 +9707,7 @@
 ||camzap.com^
 ||can-get-some.in^
 ||can-get-some.net^
+||canatrace.com^
 ||canceltrustingunderuse.com^
 ||cancriberths.com^
 ||cancritory.com^
