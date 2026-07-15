@@ -18751,6 +18751,7 @@
 ||farfeljabots.top^
 ||farflung-grab.pro^
 ||farflung-horror.pro^
+||farflunglong.pro^
 ||farformal.com^
 ||fargwyn.com^
 ||farleskimmo.cfd^
