@@ -22,6 +22,7 @@
 ||02e8b93f0e.com^
 ||0300acdff2.com^
 ||033586410b.com^
+||0359d12a54.com^
 ||039858f297.com^
 ||03b5f525af.com^
 ||03d756a534.com^
@@ -967,6 +968,7 @@
 ||49a15e8b76.com^
 ||49cwxbn4ujhzw94927bpxno749.cfd^
 ||49d4db4864.com^
+||49kplr8uppgqgqw4ev5y.cfd^
 ||4a1bd5bf84.com^
 ||4a1dcfa305.com^
 ||4a3bb4bf1e.com^
@@ -1933,6 +1935,7 @@
 ||9e1b47e1b9.com^
 ||9e3810a418.com^
 ||9e47574bc6.com^
+||9e6b5751c2.com^
 ||9e83087e91.com^
 ||9eb0066c79.com^
 ||9eebf015a5.com^
