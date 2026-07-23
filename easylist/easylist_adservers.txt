@@ -800,6 +800,7 @@
 ||3bfe089386.com^
 ||3bfff8a34d.com^
 ||3btg97ff5etmg1xgwr5rrihpmek.cfd^
+||3bx67ftc79c374r1.cfd^
 ||3c241b2b3e.com^
 ||3ca9dc59cc.com^
 ||3cb9b57efc.com^
@@ -1321,6 +1322,7 @@
 ||644b839fb7.com^
 ||64580df84b.com^
 ||64980aaffd.com^
+||64ce7c22c5.com^
 ||64f5295d06.com^
 ||64fe1cbf9e.com^
 ||64mtfgp6hc83zmf34nnexl5z46n.cfd^
