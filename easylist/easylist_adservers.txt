@@ -8566,6 +8566,7 @@
 ||bossdescendentrefer.com^
 ||bossy-future.com^
 ||bossyinternal.pro^
+||bossyratio.pro^
 ||bossywake.pro^
 ||bostopago.com^
 ||bot-checker.com^
