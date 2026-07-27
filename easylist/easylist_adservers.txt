@@ -222,6 +222,7 @@
 ||198b531aae.com^
 ||199g9kegveh84rllz.cfd^
 ||19ad8.com^
+||19b48064cd.com^
 ||19b7f4f4d8.com^
 ||19d7fd2ed2.com^
 ||19tmw2k567ugfijwimqto4.cfd^
@@ -990,6 +991,7 @@
 ||4b246mtpc5q6x5632r9.cfd^
 ||4b250936aa.com^
 ||4b54db1488.com^
+||4b5ktu5r4njo3y1x2.cfd^
 ||4b6f379d79.com^
 ||4b9mqc5kcl3wp67uih2q6q9.cfd^
 ||4ba48a7822.com^
@@ -18701,6 +18703,7 @@
 ||f4c317673b.com^
 ||f4cd8a8bf0.com^
 ||f4f0e4093e.com^
+||f51f0dff5c.com^
 ||f522b60e9e.com^
 ||f53d954cc5.com^
 ||f56d15fadf.com^
