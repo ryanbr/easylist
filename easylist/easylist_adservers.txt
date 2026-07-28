@@ -1984,6 +1984,7 @@
 ||9fe538916e.com^
 ||9ff1a25009.com^
 ||9flq9e2q5bgjn5u9m2.cfd^
+||9fz8rn9rqlfeimjoyic3uij.cfd^
 ||9g8q8rfk45v3zpjbue.cfd^
 ||9gmnfzth6vmplp1.cfd^
 ||9h6wuyen6kmm6rptqujjm2mkuij3bbpo6.cfd^
@@ -27463,6 +27464,7 @@
 ||inspectcol.com^
 ||inspectorstrongerpill.com^
 ||inspikon.com^
+||inspmuraled.cyou^
 ||instaflrt.com^
 ||instalcrozers.com^
 ||install-check.com^
