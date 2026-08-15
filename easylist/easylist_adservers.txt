@@ -2022,6 +2022,7 @@
 ||9cd4abb9e0.com^
 ||9cf6zw49xhf7pleb8kpw1.cfd^
 ||9cuo1fv233p5x889jolrw7ybzcomnvvn4c53h.cfd^
+||9czq9ry9rouj7viti618mo5.cfd^
 ||9czqvvzlqzpt4zt2k.cfd^
 ||9d2f6f9529.com^
 ||9d4a486df8.com^
@@ -34306,6 +34307,7 @@
 ||lnfksfxtuojmk.site^
 ||lnfncvjaweewi.tech^
 ||lnfqjofvyvfio.space^
+||lngacmuw.com^
 ||lngmmtgarkw.com^
 ||lngrljexega.com^
 ||lnhvtwwsghodc.space^
