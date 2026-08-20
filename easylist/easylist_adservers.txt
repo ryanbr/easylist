@@ -49,6 +49,7 @@
 ||06e6611fca.com^
 ||06f7bf5b8f.com^
 ||06f864e06a.com^
+||0704a6c22b.com^
 ||070880.com^
 ||077ef2133b.com^
 ||07b5ec4fa6.com^
@@ -669,6 +670,7 @@
 ||2x9ezrw7vuhqco.cfd^
 ||2xeibjlqyxu8m4zq7lob3qyknpl2.cfd^
 ||2xs4eumlc.com^
+||2xtzteoi16nl81kgk.cfd^
 ||2yfojwe1cm1r5j.cfd^
 ||2yrlx4lem82wqehq.cfd^
 ||2ytit6fyob6nfboi4qjllztvjicc.cfd^
@@ -816,6 +818,7 @@
 ||39762581b7.com^
 ||398pi5o7i1fnvmf.cfd^
 ||3999f86b91.com^
+||39d929a029.com^
 ||39e6p9p7.de^
 ||39q2f93bvmiz7p8bih8i.cfd^
 ||39w9ggf5wg98wlic6er8u24.cfd^
@@ -54151,6 +54154,7 @@
 ||sportsariseencyclopaedia.com^
 ||sportstoday.pro^
 ||sportstreams.xyz^
+||sportsvot.com^
 ||sportzflix.xyz^
 ||sporulekakis.com^
 ||spotless-golf.pro^
