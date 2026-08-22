@@ -77,6 +77,7 @@
 ||0b74655a28.com^
 ||0b85c2f9bb.com^
 ||0b8601f291.com^
+||0b8b518f70.com^
 ||0b8c767b16.com^
 ||0ba2b70e8c.com^
 ||0bd18cc899.com^
@@ -1035,6 +1036,7 @@
 ||4a4c8a3bdd.com^
 ||4a75c45821.com^
 ||4ac38e317e.com^
+||4ad4ba0610.com^
 ||4afe4f94c5.com^
 ||4armn.com^
 ||4b246mtpc5q6x5632r9.cfd^
@@ -1709,6 +1711,7 @@
 ||7mungnlm1fzqt278ulecb9xq.cfd^
 ||7ng6v3lu3c.execute-api.us-east-1.amazonaws.com^
 ||7nt9p4d4.de^
+||7nyk1xl9vwfn8vp7nc281h2g8.cfd^
 ||7nzr7belmnvn2zj.cfd^
 ||7on4m4c4b1ej1yrp.cfd^
 ||7ooht8tc3xtukbfl1mni9qopon.cfd^
