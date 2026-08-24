@@ -1875,6 +1875,7 @@
 ||8fbfeb27e6.com^
 ||8ffea74ec5.com^
 ||8fju4hc6v65eohunzg.cfd^
+||8foogy6qmq8vyf.cfd^
 ||8girie4xi9h7j1o82y5re7bp22.cfd^
 ||8h4tit96p2wmlxvh7r.cfd^
 ||8h97orjri4hy56r79nkbmwv1u7.cfd^
@@ -13669,6 +13670,7 @@
 ||d816d458c4.com^
 ||d88b2835c6.com^
 ||d894a1d400.com^
+||d8a566efb2.com^
 ||d8b03d6392.com^
 ||d8c04a25e8.com^
 ||d8c9bf3664.com^
@@ -16567,6 +16569,7 @@
 ||e67repidwnfu7gcha.com^
 ||e695de9aef.com^
 ||e69c935570.com^
+||e6b1cbefe5.com^
 ||e6c5f295b4.com^
 ||e6c84e5378.com^
 ||e765b97f5b.com^
