@@ -771,6 +771,7 @@
 ||3575e2d4e6.com^
 ||357dbd24e2.com^
 ||3582c977a8.com^
+||3583bab3af.com^
 ||35c82e35f3.com^
 ||35f95a147d.com^
 ||35i23gb77vkhxekq9i9igq2wfk8xp1hlef.cfd^
@@ -1648,6 +1649,7 @@
 ||7abdc2aae1.com^
 ||7amz.com^
 ||7b13d552d3.com^
+||7b1647aa2c.com^
 ||7b47a1c321.com^
 ||7b5f77dbb5.com^
 ||7b6c81b4c2.com^
@@ -40635,6 +40637,7 @@
 ||nyxpehgiwoifs.com^
 ||nyyafuvjntpme.site^
 ||nyywscncfpfzn.website^
+||nz18mki3ommxyrwtpo.cfd^
 ||nz7h11c4hl9r9i3k845wzk2pzoo8p7.cfd^
 ||nzamkeuekityn.online^
 ||nzaukmqyrumxq.store^
