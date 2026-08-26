@@ -2159,6 +2159,7 @@
 ||a-waiting.com^
 ||a-zzz.com^
 ||a00s.net^
+||a04fd7399b.com^
 ||a065b8f217.com^
 ||a06bbd98194c252.com^
 ||a06c9a4dd7.com^
@@ -13702,6 +13703,7 @@
 ||d980ffe9b6.com^
 ||d99b2e7693.com^
 ||d9a18cf497.com^
+||d9d5d79842.com^
 ||d9db994995.com^
 ||da-ads.com^
 ||da0441c5cd.com^
@@ -35719,6 +35721,7 @@
 ||lzvwybvvyrqyk.top^
 ||lzvwybvvyrwbr.top^
 ||lzvwybvvyrwyy.top^
+||lzwr42toihmrzw3j4.cfd^
 ||lzxdx24yib.com^
 ||lzxvxsiyr.com^
 ||lzy9jhq2gm3g3ph3.cfd^
