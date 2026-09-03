@@ -95,6 +95,7 @@
 ||0d9063412c.com^
 ||0d9539106a.com^
 ||0da6b9c880.com^
+||0de7e3b709.com^
 ||0e024d23f9.com^
 ||0e091251b2.com^
 ||0e176a58eb.com^
@@ -14151,6 +14152,7 @@
 ||dc-rotator.com^
 ||dc036be5b9.com^
 ||dc3f10eee9.com^
+||dc649f3e46.com^
 ||dc7dad4603.com^
 ||dcakwfzcjfjjb.life^
 ||dcaqtvqaopjoha.com^
@@ -31239,6 +31241,7 @@
 ||k6mfhwqkcvthzrmm2jwfbt.cfd^
 ||k6u2zrqhjvvx4hp.cfd^
 ||k6w3mnr6b8gq7jrl7rhlg829.cfd^
+||k6wh2riqtbpfxn5r3o5ucfq.cfd^
 ||k75h6wizey9n2iy7.cfd^
 ||k7c5vjg7zveom63hvolfqf83fwvchxhn.rest^
 ||k7qvp96978i93z4pvv85f19jeilz1phqlowlc3.cfd^
