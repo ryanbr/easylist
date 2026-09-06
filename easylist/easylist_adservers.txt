@@ -28243,6 +28243,7 @@
 ||insignificant-serve.pro^
 ||insignificanthighway.pro^
 ||insignificantpower.pro^
+||insinewsabeca.shop^
 ||insistauthorities.com^
 ||insistballisticclone.com^
 ||insistent-worker.com^
