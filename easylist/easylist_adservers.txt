@@ -578,6 +578,7 @@
 ||2dbfd83dac.com^
 ||2de65ef3dd.com^
 ||2dfdea8c5a.com^
+||2e0828e7d8.com^
 ||2e5e4544c4.com^
 ||2e68bd0a8b.com^
 ||2ee9804d02.com^
@@ -49264,6 +49265,7 @@
 ||r6bj15eomzej46.cfd^
 ||r6h2ww744xk62t7.cfd^
 ||r71y66246rxwozt18u9nvjy6x4blx44v8pbv.cfd^
+||r7679cglrh7eiqhnvmvn9riccz.cfd^
 ||r88nlkbn5bcrbjmru1lvb4k.cfd^
 ||r8m5843c9nx5ynm.cfd^
 ||r932o.com^
