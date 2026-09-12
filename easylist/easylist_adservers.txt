@@ -3159,6 +3159,7 @@
 ||adrscibgiosrk.website^
 ||adrta.com^
 ||adrunnr.com^
+||adrvhtv.help^
 ||ads-static.conde.digital^
 ||ads-twitter.com^
 ||ads.lemmatechnologies.com^
