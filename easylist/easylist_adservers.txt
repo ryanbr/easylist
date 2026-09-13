@@ -73,6 +73,7 @@
 ||0a4ebd39b2.com^
 ||0a7baba6f0.com^
 ||0af2a962b0102942d9a7df351b20be55.com^
+||0b00553438.com^
 ||0b10985d78.com^
 ||0b63fb1aad.com^
 ||0b6e17a630.com^
@@ -578,6 +579,7 @@
 ||2d5ac65613.com^
 ||2d6g0ag5l.de^
 ||2d86bbe43f.com^
+||2d89dda515.com^
 ||2dbfd83dac.com^
 ||2de65ef3dd.com^
 ||2dfdea8c5a.com^
