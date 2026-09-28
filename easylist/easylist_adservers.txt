@@ -1643,6 +1643,7 @@
 ||71b2d37f74.com^
 ||71df446534.com^
 ||71mnjocvbcxb1jv.cfd^
+||71n6i7mrb7r8y796ugbtpq5lv5y5rv.rest^
 ||71ybxtqp3ci94tyc9x7.cfd^
 ||72a56b83fa.com^
 ||72h1i16uzmbkvpn2e5.cfd^
@@ -13046,6 +13047,7 @@
 ||cq6or714eqgu6lyykm7wz29zi.cfd^
 ||cq96gjrmc1mguze6hyw.cfd^
 ||cqaqwekgzvkek.tech^
+||cqbxk55j7pxnl69c2q.cfd^
 ||cqcaoltqtarmz.space^
 ||cqcofdmqdahnp.com^
 ||cqcpazetvhaso.website^
