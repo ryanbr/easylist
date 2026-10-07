@@ -45489,6 +45489,7 @@
 ||pdn-1.com^
 ||pdn-2.com^
 ||pdn-3.com^
+||pdngenke.com^
 ||pdngwfor.com^
 ||pdnyxybyecfqso.xyz^
 ||pdogbyrewtabk.site^
