@@ -9462,6 +9462,7 @@
 ||brave-plane.pro^
 ||brave-rope.pro^
 ||brave-village.com^
+||brave.com^
 ||braverycavalryoats.com^
 ||braverychinol.top^
 ||bravesinfest.top^
@@ -54218,6 +54219,7 @@
 ||sandythought.pro^
 ||sanereply.com^
 ||sanerespect.com^
+||sanescatula.cfd^
 ||sanestruggle.com^
 ||sangarmuting.shop^
 ||sangashulloos.world^
@@ -56439,6 +56441,7 @@
 ||songslunger.com^
 ||songtopbrand.com^
 ||sonicafrazing.cfd^
+||sonicshownetwork.cfd^
 ||sonnerie.net^
 ||sonnyadvertise.com^
 ||sonnymagicalsnack.com^
